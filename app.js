@@ -45,30 +45,30 @@ function deleteText() {
 // Start the animation
 type();
 
-document.getElementById('downloadBtn').addEventListener('click', function(e) {
-    e.preventDefault();
+// document.getElementById('downloadBtn').addEventListener('click', function(e) {
+//     e.preventDefault();
     
-    // Change button text to "Downloading..."
-    this.querySelector('.btn-text').textContent = 'Downloading...';
+//     // Change button text to "Downloading..."
+//     this.querySelector('.btn-text').textContent = 'Downloading...';
     
-    // Simulate file download (replace with actual file URL)
-    fetch('/img/MUHAMMAD MUTTAHAR SHIEKH Updated CV.pdf')
-        .then(response => response.blob())
-        .then(blob => {
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.style.display = 'none';
-            a.href = url;
-            a.download = 'MUHAMMAD MUTTAHAR SHIEKH Updated CV.pdf';
-            document.body.appendChild(a);
-            a.click();
-            window.URL.revokeObjectURL(url);
-        })
-        .catch(error => {
-            console.error('Error downloading CV:', error);
-        })
-        .finally(() => {
-            // Change button text back to "Download CV"
-            this.querySelector('.btn-text').textContent = 'Download CV';
-        });
-});
+//     // Simulate file download (replace with actual file URL)
+//     fetch('/img/MUHAMMAD MUTTAHAR SHIEKH Updated CV.pdf')
+//         .then(response => response.blob())
+//         .then(blob => {
+//             const url = window.URL.createObjectURL(blob);
+//             const a = document.createElement('a');
+//             a.style.display = 'none';
+//             a.href = url;
+//             a.download = 'MUHAMMAD MUTTAHAR SHIEKH Updated CV.pdf';
+//             document.body.appendChild(a);
+//             a.click();
+//             window.URL.revokeObjectURL(url);
+//         })
+//         .catch(error => {
+//             console.error('Error downloading CV:', error);
+//         })
+//         .finally(() => {
+//             // Change button text back to "Download CV"
+//             this.querySelector('.btn-text').textContent = 'Download CV';
+//         });
+// });
