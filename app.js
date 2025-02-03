@@ -13,7 +13,7 @@
 })();
 
 
-const text = [" Muhammad Muttahar Sheikh.", "A Web Developer."];
+const text = [" Muhammad Muttahar Sheikh.", "A Web and App Developer."];
 let currentText = 0;
 let charIndex = 0;
 const typingSpeed = 100;  // Speed of typing
@@ -45,30 +45,16 @@ function deleteText() {
 // Start the animation
 type();
 
-// document.getElementById('downloadBtn').addEventListener('click', function(e) {
-//     e.preventDefault();
-    
-//     // Change button text to "Downloading..."
-//     this.querySelector('.btn-text').textContent = 'Downloading...';
-    
-//     // Simulate file download (replace with actual file URL)
-//     fetch('/img/MUHAMMAD MUTTAHAR SHIEKH Updated CV.pdf')
-//         .then(response => response.blob())
-//         .then(blob => {
-//             const url = window.URL.createObjectURL(blob);
-//             const a = document.createElement('a');
-//             a.style.display = 'none';
-//             a.href = url;
-//             a.download = 'MUHAMMAD MUTTAHAR SHIEKH Updated CV.pdf';
-//             document.body.appendChild(a);
-//             a.click();
-//             window.URL.revokeObjectURL(url);
-//         })
-//         .catch(error => {
-//             console.error('Error downloading CV:', error);
-//         })
-//         .finally(() => {
-//             // Change button text back to "Download CV"
-//             this.querySelector('.btn-text').textContent = 'Download CV';
-//         });
-// });
+document.getElementById("toggleButton").addEventListener("click", function() {
+    var hiddenText = document.getElementById("moreText");
+    var btn = document.getElementById("toggleButton");
+
+    if (hiddenText.style.display === "none") {
+        hiddenText.style.display = "inline";
+        btn.textContent = "Read Less";
+    } else {
+        hiddenText.style.display = "none";
+        btn.textContent = "Read More";
+    }
+});
+
